@@ -6,13 +6,15 @@ function addTask() {
     taskList.appendChild(newTask)
     newTask.textContent = inputTask.value;
     inputTask.value = "";
-}
-
-function deleteTask(newTask) {
     var deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add('btn-danger');
     newTask.appendChild(deleteBtn);
     deleteBtn.onclick = function () {
         newTask.remove();
     }
+}
+
+function deleteTask(newTask) {
+    newTask.remove();
 }
