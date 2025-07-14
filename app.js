@@ -29,6 +29,14 @@ function addTask() {
     console.log(todos);
     var deleteBtn = document.createElement("button");
     deleteBtn.textContent = `<span class="material-symbols-outlined">delete</span>`;
+function addTask() {
+    var newTask = document.createElement('li');
+    taskList.appendChild(newTask)
+    newTask.textContent = inputTask.value;
+    inputTask.value = "";
+    var deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add('btn-danger');
     newTask.appendChild(deleteBtn);
     deleteBtn.onclick = function () {
         newTask.remove();
@@ -42,3 +50,5 @@ function deleteTask(newTask) {
 // function edit() {
 
 // }
+    newTask.remove();
+}
