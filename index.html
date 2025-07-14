@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,11 +16,14 @@
 
         <div class="addTask">
             <input type="text" id="inputTask" placeholder="Write a new task">
-            <button onclick="addTask()">Add task</button>
+            <button type="submit" onclick="addTask()">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+            </button>
         </div>
         <div class="allTasks">
             <ul id="task-list" class="task-list">
-                
             </ul>
         </div>
     </div>
