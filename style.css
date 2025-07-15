@@ -82,3 +82,7 @@ body {
     border-radius: 5px;
     background-color: rgb(168, 229, 253);
 }
+
+.hidden {
+    display: none;
+}
