@@ -3,8 +3,13 @@
 //     taskList.appendChild(newTask)
 //     newTask.textContent = inputTask.value;
 //     inputTask.value = "";
-// }
-
+//     var deleteBtn = document.createElement("button");
+//     deleteBtn.textContent = "Delete";
+//     deleteBtn.classList.add('btn-danger');
+//     newTask.appendChild(deleteBtn);
+//     deleteBtn.onclick = function () {
+//         newTask.remove();
+//}
 
 var taskList = document.getElementById('task-list');
 var inputTask = document.getElementById("inputTask");
@@ -28,27 +33,15 @@ function addTask() {
     inputTask.value = "";
     console.log(todos);
     var deleteBtn = document.createElement("button");
-    deleteBtn.textContent = `<span class="material-symbols-outlined">delete</span>`;
-function addTask() {
-    var newTask = document.createElement('li');
-    taskList.appendChild(newTask)
-    newTask.textContent = inputTask.value;
-    inputTask.value = "";
-    var deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add('btn-danger');
+    deleteBtn.innerHTML = `<span class="material-symbols-outlined">delete</span>`;
     newTask.appendChild(deleteBtn);
-    deleteBtn.onclick = function () {
-        newTask.remove();
-    }
+    deleteBtn.onclick = deleteTask()
 }
-
-function deleteTask(newTask) {
-
+function deleteTask(todo) {
+    todos.splice(todo.id, 1);
+    
 }
 
 // function edit() {
 
-// }
-    newTask.remove();
-}
+// }ٖ
